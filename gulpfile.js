@@ -40,7 +40,6 @@ const gulp_sass = require("gulp-sass");
 const gulp_postcss = require("gulp-postcss");
 const gulp_sourcemaps = require("gulp-sourcemaps");
 const gulp_concat = require('gulp-concat');
-const gulp_rename = require('gulp-rename');
 const gulp_minify = require('gulp-minify');
 const gulp_imagemin = require('gulp-imagemin');
 const gulp_responsive = require('gulp-responsive');
@@ -128,7 +127,7 @@ const path = {
             dest: './asset/image/responsive',
             del: './asset/image/responsive/**',
             config: {
-                '*.png': [
+                '**/*.png': [
                     {
                         width: 540,
                         rename: {
@@ -159,7 +158,7 @@ const path = {
                         },
                     },
                 ],
-                '*.jpg': [
+                '**/*.jpg': [
                     {
                         width: 540,
                         rename: {
